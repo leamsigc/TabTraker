@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 5000;
 
 require('./Routes/Routes')(app);
 
-// console.log(sequelize);
 sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`);

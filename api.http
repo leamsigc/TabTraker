@@ -1,10 +1,11 @@
-# POST http://localhost:5000/register
-# Content-Type: application/json
+ POST http://localhost:5000/register
+ Content-Type: application/json
 
-# {
-#     "email":"leamsigc@hotmail.com",
-#     "name":"Ismael Garcia"
-# }
+ {
+     "email":"leamsigc@hotmail.com",
+     "name":"Ismael Garcia",
+     "password":"leamsigc12345"
+ }
 
 ### 
 //GET http://localhost:5000/
