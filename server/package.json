@@ -1,0 +1,16 @@
+{
+	"name": "tabtracker",
+	"version": "1.0.0",
+	"description": "Simple Tab Tracker ",
+	"main": "src/app.js",
+	"scripts": {
+		"dev": "nodemon src/app.js",
+		"lint": "./node_modules/.bin/eslint **/*.js"
+	},
+	"author": "Ismael Garcia Canseco",
+	"license": "MIT",
+	"devDependencies": {
+		"eslint": "^6.0.1",
+		"nodemon": "^1.19.1"
+	}
+}
