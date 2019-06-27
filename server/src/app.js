@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
+const { sequelize } = require('./Models');
 
 const app = express();
 app.use(cors());
@@ -11,17 +12,11 @@ app.use(morgan('combined'));
 
 const PORT = process.env.PORT || 5000;
 
-app.get('/', (req, res) => {
-  res.send({
-    hello: 'Hello from the app',
-  });
-});
-app.post('/register', (req, res) => {
-  res.send({
-    message: `hello ${req.body.name}${req.body.email}have register have fun `,
-  });
-});
+require('./Routes/Routes')(app);
 
-app.listen(PORT, () => {
-  console.log(`Server started on http://localhost:${PORT}`);
+// console.log(sequelize);
+sequelize.sync().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
+  });
 });
