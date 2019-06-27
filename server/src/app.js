@@ -13,7 +13,12 @@ const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
   res.send({
-    message: 'Hello from the app',
+    hello: 'Hello from the app',
+  });
+});
+app.post('/register', (req, res) => {
+  res.send({
+    message: `hello ${req.body.name}${req.body.email}have register have fun `,
   });
 });
 
