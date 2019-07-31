@@ -1,11 +1,10 @@
  
-POST http://localhost:5000/register
+POST http://localhost:5000/login
 Content-Type: application/json
 
 {
     "email":"test@hotmail.com",
-    "name":"Ismael Garcia",
-    "password":"123456789"
+    "password":"1234567"
 }
 
 ### 
